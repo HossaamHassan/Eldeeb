@@ -103,6 +103,29 @@ a {
 }
 /* End Global Rules */
 
+/* Scroll To Top */
+.scrolling {
+    background-color: var(--sec-color);
+    padding: 13px;
+    border-radius: 15px;
+    color: white;
+    position: fixed;
+    right: 20px;
+    bottom: -70px;
+    z-index: 100;
+    transition: 0.3s;
+    font-size: 1.2rem;
+    cursor: pointer;
+    animation: bounce 1600ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    -webkit-animation: bounce 1600ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    -moz-animation: bounce 1600ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    -o-animation: bounce 1600ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.show {
+    bottom: 10px;
+}
+/* Scroll To Top */
+
 /* Start Header */
 .header {
     background-color: white;
@@ -1715,6 +1738,14 @@ a {
     100% {
         transform: scale(1.1);
     }
+}
+@keyframes bounce {
+    50% {
+        transform: translateY(-10px);
+    }
+    }
+.show {
+    right: 30px;
 }
 /* End Animation */
 
